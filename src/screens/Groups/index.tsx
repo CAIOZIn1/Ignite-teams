@@ -1,13 +1,9 @@
-import {Text} from 'react-native';
-
-import { Container, Title } from './styles';
+import { Container } from './styles';
 
 const Groups = () => {
   return (
     <Container>
-      <Title >
-        Caio
-      </Title>
+
     </Container>
   );
 }
