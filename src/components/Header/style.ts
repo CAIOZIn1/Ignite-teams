@@ -1,6 +1,5 @@
 import styled from "styled-components/native";
 import { CaretLeft } from 'phosphor-react-native';
-import theme from "src/theme";
 import { ThemeType } from "styled-components";
 
 

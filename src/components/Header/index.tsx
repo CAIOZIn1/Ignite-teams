@@ -9,11 +9,10 @@ type Props = {
 const Header: React.FC<Props> = ({ showBackButton = false }) => {
   return (
     <Container>
+      {showBackButton &&
       <BackButton>
-        {
-          showBackButton && <BackIcon />
-        }
-      </BackButton>
+          <BackIcon />
+      </BackButton>}
 
       <Logo source={LogoImg}/>
     </Container>
