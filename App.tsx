@@ -4,7 +4,7 @@ import { useFonts, Nunito_400Regular, Nunito_700Bold } from "@expo-google-fonts/
 
 import { StatusBar } from "react-native";
 
-import Groups from "@screens/Groups";
+import NewGroup from "@screens/NewGroup";
 import Loading from "@components/Loading";
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
       />
 
       <ThemeProvider theme={theme}>
-        { fontsLoaded ? <Groups/> : <Loading />}
+        { fontsLoaded ? <NewGroup/> : <Loading />}
       </ThemeProvider>
     </>
   );
