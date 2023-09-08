@@ -6,6 +6,7 @@ import { StatusBar } from "react-native";
 
 import NewGroup from "@screens/NewGroup";
 import Loading from "@components/Loading";
+import Players from "@screens/Players";
 
 const App = () => {
   const [fontsLoaded] = useFonts({ Nunito_400Regular, Nunito_700Bold});
@@ -19,7 +20,7 @@ const App = () => {
       />
 
       <ThemeProvider theme={theme}>
-        { fontsLoaded ? <NewGroup/> : <Loading />}
+        { fontsLoaded ? <Players /> : <Loading />}
       </ThemeProvider>
     </>
   );
