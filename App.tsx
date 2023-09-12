@@ -4,9 +4,8 @@ import { useFonts, Nunito_400Regular, Nunito_700Bold } from "@expo-google-fonts/
 
 import { StatusBar } from "react-native";
 
-import NewGroup from "@screens/NewGroup";
-import Loading from "@components/Loading";
-import Players from "@screens/Players";
+import Loading from '@components/Loading';
+import Routes from './src/routes';
 
 const App = () => {
   const [fontsLoaded] = useFonts({ Nunito_400Regular, Nunito_700Bold});
@@ -20,7 +19,7 @@ const App = () => {
       />
 
       <ThemeProvider theme={theme}>
-        { fontsLoaded ? <Players /> : <Loading />}
+        { fontsLoaded ? <Routes /> : <Loading />}
       </ThemeProvider>
     </>
   );

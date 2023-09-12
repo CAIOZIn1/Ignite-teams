@@ -8,7 +8,7 @@ const {Navigator, Screen} = createNativeStackNavigator();
 
 const AppRoutes = () => {
   return (
-    <Navigator>
+    <Navigator screenOptions={{headerShown: false}}>
       <Screen
         name='groups'
         component={Groups}
