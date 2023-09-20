@@ -11,7 +11,7 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import groupGetAll from '@storage/group/groupGetAll';
 
 const Groups = () => {
-  const [groups, setGroups] = useState<string[]>([]);
+  const [groups, setGroups] = useState<string[]>(['']);
 
   const navigation = useNavigation();
 
@@ -26,6 +26,10 @@ const Groups = () => {
     } catch(err){
       console.log(err);
     }
+  }
+
+  const handleOpenGroup = (group: string) => {
+    navigation.navigate('players', {group})
   }
 
   useFocusEffect(useCallback(() => {
@@ -47,6 +51,7 @@ const Groups = () => {
         renderItem={({ item }) => (
           <GroupCard
             title={item}
+            onPress={() => handleOpenGroup(item)}
           />
         )}
         contentContainerStyle={
